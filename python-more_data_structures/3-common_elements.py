@@ -1,7 +1,3 @@
 #!/usr/bin/python3
-def a(b, c):
-    d = []
-    for i in c:
-        if i not in b:
-            d.append(i)
-    return d
+def common_elements(set_1, set_2):
+    return list(set_1 & set_2)
