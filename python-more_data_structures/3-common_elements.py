@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def a(b, c):
     d = []
     for i in c:
