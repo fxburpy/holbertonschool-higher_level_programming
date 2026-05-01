@@ -15,7 +15,7 @@ class Shape(ABC):
 
 class Circle(Shape):
     def __init__(self, radius):
-        self.radius = radius
+        self.radius = abs(radius)  # FIX: handle negative radius
 
     def area(self):
         return math.pi * (self.radius ** 2)
@@ -26,8 +26,8 @@ class Circle(Shape):
 
 class Rectangle(Shape):
     def __init__(self, width, height):
-        self.width = width
-        self.height = height
+        self.width = abs(width)   # FIX
+        self.height = abs(height) # FIX
 
     def area(self):
         return self.width * self.height
