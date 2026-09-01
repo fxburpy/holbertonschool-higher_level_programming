@@ -7,6 +7,8 @@ The ``add_integer`` function adds integers and converted floats.
     100
     >>> add_integer(100.3, -2)
     98
+    >>> add_integer(-4.9, 2.8)
+    -2
     >>> add_integer("1", 2)
     Traceback (most recent call last):
     TypeError: a must be an integer

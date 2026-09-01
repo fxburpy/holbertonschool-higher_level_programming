@@ -9,3 +9,31 @@ The ``text_indentation`` function formats text around punctuation.
     >>> text_indentation(12)
     Traceback (most recent call last):
     TypeError: text must be a string
+    >>> import io
+    >>> from contextlib import redirect_stdout
+    >>> output = io.StringIO()
+    >>> with redirect_stdout(output):
+    ...     text_indentation("  Hello.   World?  ")
+    >>> output.getvalue()
+    'Hello.\n\nWorld?\n\n'
+    >>> output = io.StringIO()
+    >>> with redirect_stdout(output):
+    ...     text_indentation("  Hello  ")
+    >>> output.getvalue()
+    'Hello'
+    >>> output = io.StringIO()
+    >>> with redirect_stdout(output):
+    ...     text_indentation("A:: B")
+    >>> output.getvalue()
+    'A:\n\n:\n\nB'
+    >>> output = io.StringIO()
+    >>> with redirect_stdout(output):
+    ...     text_indentation("")
+    >>> output.getvalue()
+    ''
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'

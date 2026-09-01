@@ -21,6 +21,20 @@ The ``matrix_divided`` function returns a new divided matrix.
     >>> matrix_divided([[1, "School"]], 2)
     Traceback (most recent call last):
     TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> matrix_divided([], 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> matrix_divided([[]], 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> matrix_divided([(1, 2)], 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> matrix_divided([[1]], None)
+    Traceback (most recent call last):
+    TypeError: div must be a number
+    >>> matrix_divided([[1.5, -2]], 2.0)
+    [[0.75, -1.0]]
     >>> matrix_divided([[1, 2]], float("inf"))
     [[0.0, 0.0]]
     >>> matrix_divided([[float("inf")]], 2)

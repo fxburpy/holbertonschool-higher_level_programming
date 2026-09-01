@@ -11,3 +11,18 @@ The ``print_square`` function prints square shapes.
     >>> print_square(2.5)
     Traceback (most recent call last):
     TypeError: size must be an integer
+    >>> print_square(-2.5)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+    >>> print_square("2")
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+    >>> print_square(None)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+    >>> print_square(True)
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+    >>> print_square()
+    Traceback (most recent call last):
+    TypeError: print_square() missing 1 required positional argument: 'size'
