@@ -12,3 +12,30 @@ The ``matrix_divided`` function returns a new divided matrix.
     >>> matrix_divided([[1]], 0)
     Traceback (most recent call last):
     ZeroDivisionError: division by zero
+    >>> matrix_divided([[1, 2]], "2")
+    Traceback (most recent call last):
+    TypeError: div must be a number
+    >>> matrix_divided("not a matrix", 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> matrix_divided([[1, "School"]], 2)
+    Traceback (most recent call last):
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+    >>> matrix_divided([[1, 2]], float("inf"))
+    [[0.0, 0.0]]
+    >>> matrix_divided([[float("inf")]], 2)
+    [[inf]]
+    >>> matrix_divided([[float("nan")]], 2)
+    [[nan]]
+    >>> matrix_divided([[float("inf")]], float("inf"))
+    [[nan]]
+    >>> matrix_divided([[float("nan")]], float("nan"))
+    [[nan]]
+    >>> matrix_divided([[1]], float("nan"))
+    [[nan]]
+    >>> matrix_divided([[1]])
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+    >>> matrix_divided()
+    Traceback (most recent call last):
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
