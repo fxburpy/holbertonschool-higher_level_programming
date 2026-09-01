@@ -14,3 +14,29 @@ The ``MyList`` class behaves like a list and prints a sorted copy.
     [1, 2, 3, 3]
     >>> isinstance(MyList(), list)
     True
+    >>> appended = MyList()
+    >>> appended.append(3)
+    >>> appended.append(1)
+    >>> appended.append(2)
+    >>> appended
+    [3, 1, 2]
+    >>> str(appended)
+    '[3, 1, 2]'
+    >>> result = appended.print_sorted()
+    [1, 2, 3]
+    >>> result is None
+    True
+    >>> appended
+    [3, 1, 2]
+    >>> ordered = MyList()
+    >>> ordered.append(1)
+    >>> ordered.append(2)
+    >>> ordered.append(3)
+    >>> ordered.print_sorted()
+    [1, 2, 3]
+    >>> negatives = MyList()
+    >>> negatives.append(-1)
+    >>> negatives.append(-5)
+    >>> negatives.append(2)
+    >>> negatives.print_sorted()
+    [-5, -1, 2]
