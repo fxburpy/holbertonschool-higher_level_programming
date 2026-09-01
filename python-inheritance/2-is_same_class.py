@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""This module defines is_same_class function."""
+"""Provide exact class identity checking."""
 
 
 def is_same_class(obj, a_class):
-    """Return True if obj is exactly an instance of a_class, otherwise False."""
+    """Return ``True`` only when ``obj`` is exactly an ``a_class`` instance."""
     return type(obj) is a_class
